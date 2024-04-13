@@ -1,0 +1,28 @@
+.container {
+  height: calc(100vh - 425px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > button {
+    border-radius: 100px;
+    background: 0 0;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px;
+    letter-spacing: 2px;
+    display: block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all ease-in 0.2s;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+  }
+}

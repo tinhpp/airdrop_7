@@ -1,0 +1,97 @@
+.account {
+  height: 100%;
+  background-color: rgb(54, 40, 72);
+  padding: 24px;
+  border-radius: 25px;
+  border: 1px solid rgb(146, 108, 227);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+
+  .balance-block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      color: #716185;
+      font-size: 16px;
+    }
+
+    .balance {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0.05px;
+    }
+
+    .money {
+      padding: 6px 12px;
+      background-color: #6d50cd;
+      border-radius: 8px;
+      width: fit-content;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  }
+
+  .block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      width: 100%;
+      background-color: #221630;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 12px;
+
+      .label {
+        color: #716185;
+        font-size: 14px;
+      }
+
+      .value {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      > button {
+        outline: none;
+        border: none;
+        background-color: rgb(146, 108, 227);
+        border-radius: 8px;
+        font-size: 12px;
+        letter-spacing: 0.05px;
+        padding: 6px 16px;
+        cursor: pointer;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:disabled {
+          border: 1px solid #999999;
+          background-color: #cccccc;
+          color: #666666;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

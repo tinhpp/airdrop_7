@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  backend:
+    image: node:18.16.1-alpine3.17
+    container_name: avenger_empty_backend
+    build:
+      dockerfile: Dockerfile.empty
+    command : "true"
+    entrypoint : "true"

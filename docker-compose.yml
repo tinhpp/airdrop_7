@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:alpine
+    container_name: avenger_redis_db
+    volumes:
+      - ./database:/data
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+    networks:
+      - avenger-network
+    restart: always
+
+  backend:
+    image: build.backend
+    container_name: avenger_backend
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - 3000:3000
+    env_file:
+      - backend/.env
+    environment:
+      - REDIS_ORDER_HOST=redis
+      - REDIS_VOTE_HOST=redis
+    depends_on:
+      - redis
+    restart:
+      on-failure
+
+networks:
+  avenger-network:
+    name: avenger-network
+    driver: bridge

@@ -1,0 +1,39 @@
+.container {
+  margin-top: 24px;
+  margin-bottom: 60px;
+
+  .heading {
+    height: 54px;
+    padding: 0 12px;
+    background-color: #221e37;
+    box-shadow: 1px 1px 0 #000;
+    line-height: 54px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .list-nfts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 8px;
+  }
+
+  .no-data {
+    background-color: #221e37;
+    padding: 24px;
+
+    span {
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 12px;
+      color: #8784b5;
+      display: block;
+      padding: 12px 0;
+      width: 100%;
+      min-width: 260px;
+      border: dashed 1px #8784b5;
+      margin: 0 auto;
+    }
+  }
+}

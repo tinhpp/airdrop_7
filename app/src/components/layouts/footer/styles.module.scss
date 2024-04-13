@@ -1,0 +1,75 @@
+.footer {
+  background-color: #0c0b1a;
+
+  padding: 36px 240px;
+  justify-content: space-between;
+  display: flex;
+
+  @media (max-width: 767px) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 240px;
+    padding-left: 240px;
+  }
+
+  .introduction {
+    .logo {
+      text-decoration: none;
+      color: #14152d;
+      text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff,
+        -1px 1px #fff;
+      font-size: 36px;
+      font-weight: 900;
+    }
+
+    .description {
+      margin: 14px 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+
+    .menu-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 14px;
+
+      .menu-title {
+        text-transform: uppercase;
+        padding-bottom: 28px;
+        font-weight: 900;
+      }
+
+      .menu-item {
+        .menu-item-link {
+          display: block;
+          padding: 0 0 12px;
+          text-decoration: none;
+          line-height: 30px;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

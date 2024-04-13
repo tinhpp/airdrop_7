@@ -1,0 +1,158 @@
+.form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9990;
+  background: rgba($color: #000000, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    width: 700px;
+    background-color: #281a4d;
+    padding: 32px;
+    border-radius: 8px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    .close-btn {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      font-size: 40px;
+      font-weight: 900;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #221630;
+      }
+    }
+
+    .row {
+      grid-auto-rows: 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > img {
+          width: 100%;
+          border-radius: 12px;
+          background-color: rgb(54, 40, 72);
+        }
+
+        .info {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          width: 284px;
+
+          .label {
+            font-weight: bold;
+            width: 40%;
+          }
+
+          .value {
+            display: flex;
+            align-items: center;
+
+            > span {
+              margin-right: 12px;
+            }
+
+            > a {
+              height: 16px;
+            }
+          }
+
+          > button {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 400;
+            flex-grow: 4;
+            height: 28px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            &:first-child {
+              background-color: #5c113e;
+              margin-right: 8px;
+            }
+
+            &:last-child {
+              background-color: #6d50cd;
+              margin-left: 8px;
+              font-weight: 600;
+            }
+          }
+
+          button[type='submit'] {
+            background-color: #6d50cd;
+            margin-left: 8px;
+            font-weight: 600;
+          }
+        }
+
+        &.section-btn {
+          justify-content: center !important;
+          > button {
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 36px;
+            border-radius: 12px;
+            font-size: 16px;
+            letter-spacing: 0.05px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          .accept-btn {
+            background-color: rgb(146, 108, 227);
+            margin-bottom: 12px;
+          }
+
+          .reject-btn {
+            background-color: rgb(251, 35, 36);
+          }
+        }
+
+        .chart {
+          width: 100%;
+          height: 36px;
+          text-align: center;
+          line-height: 36px;
+          font-size: 14px;
+
+          &.chart-accept {
+            background-color: rgb(146, 108, 227);
+          }
+
+          &.chart-reject {
+            background-color: rgb(251, 35, 36);
+          }
+        }
+      }
+    }
+  }
+}
